@@ -1,0 +1,16 @@
+$darker-blue: #10293f;
+$dark-blue: #2d5e8f;
+$blue: #4690dc;
+$light-blue: #b1dbf5;
+$orange: #ef4924;
+$font-family-sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
+$font-size-base:  16px !default;
+$font-size-h1: floor(($font-size-base * 2.8)) !default; // ~36px
+$font-size-h2: floor(($font-size-base * 2.4)) !default; // ~30px
+$font-size-h3: ceil(($font-size-base * 1.9)) !default; // ~24px
+$font-size-h4: ceil(($font-size-base * 1.4)) !default; // ~18px
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * 0.85)) !default; // ~12px
+$headings-font-weight: 100;
+$navbar-inverse-link-hover-bg:     $blue;
+$navbar-inverse-link-active-bg:    darken($navbar-inverse-link-hover-bg, 10%);

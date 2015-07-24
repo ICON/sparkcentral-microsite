@@ -1,0 +1,250 @@
+@import "bootstrap";
+
+//globals
+section {
+  padding: 3rem 0 5rem;
+  &:first-of-type {
+    padding: 0;
+  }
+}
+%section-bg {
+  background-color: $gray-lighter;
+}
+h1 {
+  margin-bottom: 3rem;
+}
+h2,h3,h4 {
+  margin-bottom: 1.5rem;
+}
+h1 {
+  color: $darker-blue;
+  &:before, &:after {
+    font-size: $font-size-base * 3.5;
+    color: $orange;
+  }
+  &:before {
+    content: "\7b";
+    padding-right: 1rem;
+  }
+  &:after {
+    content: "\7d";      
+    padding-left: 1rem;
+  }
+}
+h2 {
+  color: $dark-blue;
+}
+h3, h4 {
+  color: $blue;
+}
+.center {
+  @include center-block();
+}
+.btn-primary {
+  &:hover, &:focus {
+    background-color: $orange; 
+    border-color: $orange;
+  }
+}
+%img-full {
+  width: 100%;
+}
+%circle {
+  border-radius: 50%;
+}
+%rounded-corners{
+  border-radius: 8px;
+}
+.flex-container {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+.no-padding {
+  padding: 0;
+}
+
+//Header section
+#header {
+  padding-top: 50px;
+  .header-img {
+    @extend %img-full;
+  }
+  .jumbotron {
+    background: none;
+  }
+}
+.navbar-inverse {
+  background: $gray-dark;
+  font-size: 14px;
+  .navbar-brand {
+    padding: 10px 20px;
+    img {
+      height: 30px;
+    }
+  }
+}
+#intro {
+  margin-top: 3rem;
+  h1 {
+    text-align: center;
+    margin: 4rem 0 2rem;
+  }
+  h3 {
+    text-align: center;
+    line-height: 1.3;
+    margin: 0 0 4rem;
+  }
+  li img {
+    height: 260px;
+  }
+  p img {
+    float: left;
+    max-width: 250px;
+    margin: 0 25px 25px 0;
+  }
+  .btn {
+    margin-top: 2rem;
+    padding: 10px 50px;
+  }
+}
+// Speakers section
+#speakers {
+  @extend %section-bg;
+  margin-bottom: 0;
+  .container > .row:first-child {
+    margin-bottom: 2rem;
+  }
+  .speaker {
+    width: 280px;
+    text-align: center;
+    margin: 5px;
+    &.keynote {
+      width: 400px;
+    }
+    img {
+      @extend %img-full;
+      @extend %circle;
+      border: 1px solid $gray-light;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    h4 {
+      color: $blue;
+      margin-bottom: 0;
+    }
+    i {
+      color: $dark-blue;
+    }
+  }
+}
+//Customers section
+#customers {
+  background: $blue;
+  color: white;
+  padding: 30px 0;
+  .row {
+    .logo {
+      text-align: center;
+      img {
+        width: auto;
+        height: 25px;
+        max-width: 180px;
+        vertical-align: middle;
+        margin-top: 10px;
+      }
+      &:nth-child(6) {
+        img {
+          height: 50px;
+          margin: 0 20px 0 0;
+        }
+      }
+    } 
+  }
+}
+// Agenda section
+#agenda {
+  .agenda {
+    @extend %rounded-corners;
+    background: $gray-lighter;
+    border: 1px solid $dark-blue;
+    padding: 18px;
+    margin: 2rem 0; 
+  }
+  h4 {
+    color: $orange;
+  }
+  dt, dd {
+    display: inline-block;
+    padding: 5px 0;
+  }
+  dt {
+    width: 100px;
+    color: $dark-blue;
+  }
+}
+// Why attend section
+#why-attend {
+  @extend %section-bg;
+  img {
+    @extend %img-full;
+  }
+  .flex-container {
+    align-items: baseline;
+  }
+  .icons {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    padding: 6rem;
+    &:first-child img {
+      height: 260px;
+      margin-top: 40px;
+    }
+    img, i {
+      height: 300px;
+      margin-bottom: 2rem;
+    }
+  }
+  .callout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5rem;
+    color: $gray-light;
+    opacity: 0.2;
+  }
+}
+#map {
+  padding-top: 0;
+}
+#map-canvas {
+  height: 600px;
+  width: 100%;
+}
+#venues-hotels {
+  .row > div {
+    text-align: center;
+  }
+  img {
+    @extend %img-full;
+    @extend %circle;
+    border: 1px solid $gray-light;
+  }
+  h4 {
+    margin: 3rem 0 1rem;
+  }
+}
+#registration {
+  @extend %section-bg;
+}
+footer {
+  background: $darker-blue;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
